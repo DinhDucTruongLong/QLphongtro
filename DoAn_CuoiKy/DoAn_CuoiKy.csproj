@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93B7E156-165D-484B-921A-417904F835CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DoAn_CuoiKy</RootNamespace>
+    <AssemblyName>DoAn_CuoiKy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DanhmucDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhmucDV.Designer.cs">
+      <DependentUpon>DanhmucDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhsachHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhsachHD.Designer.cs">
+      <DependentUpon>DanhsachHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHeThong.Designer.cs">
+      <DependentUpon>frmHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HDdichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HDdichvu.Designer.cs">
+      <DependentUpon>HDdichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\CT_DICHVU.cs" />
+    <Compile Include="model\CT_LAPDAT.cs" />
+    <Compile Include="model\DANGNHAP.cs" />
+    <Compile Include="model\DICHVU.cs" />
+    <Compile Include="model\HOADON.cs" />
+    <Compile Include="model\KHACHHANG.cs" />
+    <Compile Include="model\MALOAIPHONG.cs" />
+    <Compile Include="model\PHIEUDANGKY.cs" />
+    <Compile Include="model\PHIEUPHAT.cs" />
+    <Compile Include="model\PHONG.cs" />
+    <Compile Include="model\QuanLyPhongTroContextDB.cs" />
+    <Compile Include="model\THIETBI.cs" />
+    <Compile Include="NhapHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapHD.Designer.cs">
+      <DependentUpon>NhapHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DanhmucDV.resx">
+      <DependentUpon>DanhmucDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhsachHD.resx">
+      <DependentUpon>DanhsachHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHeThong.resx">
+      <DependentUpon>frmHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HDdichvu.resx">
+      <DependentUpon>HDdichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapHD.resx">
+      <DependentUpon>NhapHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
